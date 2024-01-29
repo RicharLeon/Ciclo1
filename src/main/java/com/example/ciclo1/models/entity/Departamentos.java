@@ -23,4 +23,7 @@ public class Departamentos {
     @Column(name = "NOMBRE")
     public String nombreDepartamento;
 
+    @Column(name = "DESCRIPCION")
+    public String descripcionDep;
+
 }

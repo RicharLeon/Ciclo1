@@ -8,8 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface IHabitacionesDao extends JpaRepository<Habitaciones, Long> {
+
     @Query("SELECT NEW com.example.proyecto1.models.dao.HabitacionesConsultaDTO( h.idHabitacion, h.nroHabitacion, h.tipoHabitacion, " +
-            "h.habitacionDisponible, idDepartamento FROM habitaciones h" +
-            "JOIN ")
+            "h.habitacionDisponible) FROM habitaciones h INNER JOIN departamentos d " +
+            "WHERE h.habitacionDisponible = '1' AND h.habitacionDisponible = ?1 ")
+
     List<HabitacionesConsultaDTO> consultaHabitacionesPorDepartamento(Long id);
 }

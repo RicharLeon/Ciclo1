@@ -18,6 +18,6 @@ public class HabitacionesConsultaDTO {
     public Long nroHabitacion;
     public String tipoHabitacion;
     public Long habitacionDisponible;
-    private Long idDepartamento;
+    public Long idDepartamento;
 
 }
