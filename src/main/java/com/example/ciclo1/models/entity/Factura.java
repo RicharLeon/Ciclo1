@@ -5,8 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.cglib.core.Local;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import javax.persistence.*;
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 
 @NoArgsConstructor
@@ -33,8 +35,5 @@ public class Factura {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PACIENTE_ID", insertable = false, updatable = false)
     private Pacientes pacientes;
-
-
-
 
 }
